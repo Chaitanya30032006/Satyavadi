@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SATYAVADI - AI Chat Assistant</title>
+    <link rel="icon" type="image/png" href="/static/images/satyavadi-logo.png">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Intro/Splash Screen -->
+    <div id="introScreen" class="intro-screen">
+        <div class="intro-content-wrapper">
+            <div class="intro-logo-container">
+                <img src="/static/images/satyavadi-logo.png" alt="Satyavadi Logo" class="intro-screen-logo" onerror="this.onerror=null; this.src='/static/images/satyavadi-logo.svg';" />
+            </div>
+            <h1 class="intro-title">SATYAVADI</h1>
+            <p class="intro-subtitle">AI-Powered Misinformation Detection</p>
+            <div class="intro-loader">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="chat-container" id="mainContainer" style="display: none;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <button id="newChatBtn" class="new-chat-btn">
+                    <i class="fas fa-plus"></i>
+                    New Chat
+                </button>
+            </div>
+            <div class="sidebar-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <img src="/static/images/satyavadi-logo.png" alt="Satyavadi" class="sidebar-logo" onerror="this.onerror=null; this.src='/static/images/satyavadi-logo.svg';" />
+                        <h2>SATYAVADI</h2>
+                    </div>
+                    <p class="tagline">AI-Powered Misinformation Detection</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-main">
+            <!-- Chat Header -->
+            <header class="chat-header">
+                <div class="header-title">
+                    <img src="/static/images/satyavadi-logo.png" alt="Satyavadi" class="header-logo" onerror="this.onerror=null; this.src='/static/images/satyavadi-logo.svg';" />
+                    <h1>SATYAVADI</h1>
+                </div>
+                <div class="header-actions">
+                    <button id="clearChatBtn" class="icon-btn" title="Clear Chat">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Messages Container -->
+            <div id="messagesContainer" class="messages-container">
+                <!-- Welcome Message -->
+                <div class="message assistant-message welcome-message">
+                    <div class="message-avatar">
+                        <img src="/static/images/satyavadi-logo.png" alt="SATYAVADI" class="avatar-logo" onerror="this.onerror=null; this.src='/static/images/satyavadi-logo.svg';" />
+                    </div>
+                    <div class="message-content">
+                        <div class="message-text">
+                            <!-- Logo Section -->
+                            <div class="logo-intro-container">
+                                <div class="logo-wrapper">
+                                    <img src="/static/images/satyavadi-logo.png" alt="Satyavadi Logo" class="intro-logo" onerror="this.onerror=null; this.src='/static/images/satyavadi-logo.svg';" />
+                                </div>
+                                <div class="welcome-text">
+                                    <h2 class="welcome-title">Welcome to SATYAVADI</h2>
+                                    <p class="welcome-subtitle">Your AI-Powered Misinformation Detection Assistant</p>
+                                </div>
+                            </div>
+                            
+                            <div class="intro-content">
+                                <p>Hello! I'm SATYAVADI, your intelligent assistant for detecting misinformation and verifying content in real-time.</p>
+                                <p><strong>I can help you:</strong></p>
+                                <ul>
+                                    <li>🔍 Analyze content for misinformation and false claims</li>
+                                    <li>⚠️ Detect fear spreading, hate speech, violence, manipulation, and political propaganda</li>
+                                    <li>✅ Check facts and verify claims with trusted sources</li>
+                                    <li>📚 Provide verified alternatives and reliable information</li>
+                                    <li>💬 Answer questions about content reliability and fact-checking</li>
+                                </ul>
+                                <p><strong>How to use:</strong> Type your message, paste content to verify, or use voice input by clicking the microphone button. Try saying "Check if this news is real."</p>
+                            </div>
+                        </div>
+                        <div class="message-time">Just now</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <div class="input-container">
+                    <button id="micBtn" class="icon-btn mic-btn" title="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="Type your message, paste content, or use voice input..."
+                        rows="1"
+                    ></textarea>
+                    <button id="sendBtn" class="send-btn" title="Send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="input-footer">
+                    <p class="disclaimer">
+                        <i class="fas fa-info-circle"></i>
+                        SATYAVADI can make mistakes. Always verify important information.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="static/js/app.js"></script>
+</body>
+</html>
+
