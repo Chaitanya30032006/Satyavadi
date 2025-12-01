@@ -1,0 +1,11 @@
+Flask==3.0.0
+flask-cors==4.0.0
+openai==1.3.0
+python-dotenv==1.0.0
+transformers==4.35.0
+torch==2.1.0
+# Note: Speech recognition uses browser's Web Speech API (client-side)
+# For server-side speech recognition, uncomment below:
+# SpeechRecognition==3.10.0
+# pyaudio==0.2.14
+
